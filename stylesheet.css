@@ -1,0 +1,117 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+a
+{
+  outline: 0;
+  text-decoration: none;
+}
+
+html, body
+{
+  font: 16px Helvetica Neue, Arial, Helvetica, 'Liberation Sans', FreeSans, sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: #0a1119;
+  color: white;
+}
+
+.bar a:link {
+  color: #ffc265;
+}
+
+.bar a:visited {
+  color: #ffc265;
+}
+
+.bar a:hover {
+  color: #ffd18b;
+  background-color: #10171f; /*#05080c;*/
+}
+
+.bar a:active {
+  color: #ffdeaa;
+  background-color: #10171f;
+}
+
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -40px; /* the bottom margin is the negative value of the footer's height */
+}
+
+#vertical-center
+{
+  z-index: 1;
+  position: relative;
+  width: 841px;
+  height: 168px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#logo
+{
+  border: none;
+}
+
+.bar
+{
+  z-index: 999;
+  height: 40px;
+  min-width: 841px; /* vertical-center width */
+  width: 100%;
+  background-color: #070d13;
+}
+
+#push
+{
+  height: 40px;
+}
+
+#top
+{
+  position: absolute;
+  top: 0px;
+}
+
+.bar ul
+{
+  text-align: justify;
+  list-style: none;
+  display: inline-block;
+
+}
+
+.bar li
+{
+  float: left;
+}
+
+.bar h1, .bar a
+{
+  white-space: nowrap;
+  display: inline-block;
+  padding: 11px;
+}
+
+#geek, #mail
+{
+  float: left;
+}
+
+#personal, .im
+{
+  float: right;
+}
+
+h1
+{
+  float: left;
+  font-size: 16px;
+  font-weight: bold;
+}

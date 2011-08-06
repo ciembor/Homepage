@@ -1,0 +1,96 @@
+<!DOCTYPE html  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <title>Maciej Ciemborowicz</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheet.css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        /* center my image vertically */
+
+        jQuery.fn.vertical_center = function(bar_height) {
+          if ($(window).height() > this.height() + bar_height * 2)
+            this.css('padding-top', ($(window).height() - this.height()) / 2);
+          else
+            this.css('padding-top', bar_height);
+          return this;
+        }
+
+        $('#vertical-center').vertical_center(80);
+
+        $(window).bind('resize', function() {
+          $('#vertical-center').vertical_center(80);
+        });
+
+        /* update my contact data (anti spam) */
+        
+        $('#adress').attr('href', 'mailto:pub@' + window.location.hostname);
+        $('#adress').text('pub@' + window.location.hostname);
+        
+        $('#xmpp').attr('href', 'xmpp:' + 'ciembor' + '@' + 'jid.pl');
+        $('#xmpp').text('ciembor' + '@' + 'jid.pl');
+        
+      });
+    </script>
+
+  </head>
+
+  <body>
+
+    <div id="wrapper"> <!-- becouse of bottom bar position -->
+      
+      <div id="top" class="bar">
+        <div id="geek">
+          <h1>Geek:</h1><ul>
+            <li><a href="http://blog.ciemborowicz.pl" target="_blank" rel="me">Blog</a></li>
+            <li><a href="http://twitter.com/ciembor" target="_blank" rel="me">Twitter</a></li>
+            <li><a href="http://github.com/ciembor" target="_blank" rel="me">GitHub</a></li>
+            <li><a href="http://stackoverflow.com/users/744436/ciembor" target="_blank" rel="me">StackOverflow</a></li>
+          </ul>
+        </div>
+        
+        <div id="personal">
+          <h1>Personal:</h1><ul>
+            <li><a href="http://pl-pl.facebook.com/people/Maciej-Ciemborowicz/100000483817358" target="_blank" rel="me">Facebook</a></li>
+            <li><a href="http://www.endomondo.com/profile/1606459" target="_blank" rel="me">Endomondo</a></li>
+            <li><a href="http://www.lastfm.pl/user/ciembor" target="_blank" rel="me">Last.fm</a></li>
+          </ul>
+         </div>
+      </div>
+      
+      <div id="vertical-center">
+        <a href="http://ciemborowicz.pl">
+          <img src="logo.png" id="logo" alt="Maciej Ciemborowicz" />
+        </a>
+      </div>
+      
+      <div id="push"></div> <!-- becouse of bottom bar position -->
+      
+    </div>
+    
+    <div id="bottom" class="bar">
+     
+      <div id="mail">
+        <h1>E-mail:</h1>
+        <a id="adress" href="mailto:pub at my domain">pub at my domain</a>
+      </div>
+      
+      <div class="im">
+        <h1>GG:</h1>
+        <a id="gg" href="gg:3263402">3263402</a>
+      </div>
+      <div class="im">
+        <h1>XMPP:</h1>
+        <a id="xmpp" href="xmpp:ciembor at jid dot pl">ciembor at jid dot pl</a>
+      </div>
+    </div>
+
+  </body>
+
+</html>
