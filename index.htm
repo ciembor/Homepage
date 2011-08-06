@@ -12,6 +12,16 @@
     <script type="text/javascript">
       $(document).ready(function() {
 
+        /* update my contact data (anti spam) */
+        
+        var hostname = window.location.hostname.replace(/www\./, '');
+        
+        $('#adress').attr('href', 'mailto:pub@' + hostname);
+        $('#adress').text('pub@' + hostname);
+        
+        $('#xmpp').attr('href', 'xmpp:' + 'ciembor' + '@' + 'jid.pl');
+        $('#xmpp').text('ciembor' + '@' + 'jid.pl');
+        
         /* center my image vertically */
 
         jQuery.fn.vertical_center = function(bar_height) {
@@ -27,14 +37,6 @@
         $(window).bind('resize', function() {
           $('#vertical-center').vertical_center(40);
         });
-
-        /* update my contact data (anti spam) */
-        
-        $('#adress').attr('href', 'mailto:pub@' + window.location.hostname);
-        $('#adress').text('pub@' + window.location.hostname);
-        
-        $('#xmpp').attr('href', 'xmpp:' + 'ciembor' + '@' + 'jid.pl');
-        $('#xmpp').text('ciembor' + '@' + 'jid.pl');
         
       });
     </script>
