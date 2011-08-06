@@ -2,6 +2,7 @@
 {
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 a
@@ -84,29 +85,34 @@ html, body
   text-align: justify;
   list-style: none;
   display: inline-block;
-
 }
 
 .bar li
 {
   float: left;
+  overflow: hidden;
+  height: 40px;
 }
 
 .bar h1, .bar a
 {
   white-space: nowrap;
   display: inline-block;
-  padding: 11px;
+  padding: 11px 11px 11px 11px;
 }
 
 #geek, #mail
 {
   float: left;
+  overflow: hidden;
+  height: 40px;
 }
 
 #personal, .im
 {
   float: right;
+  overflow: hidden;
+  height: 40px;
 }
 
 h1
