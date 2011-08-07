@@ -101,14 +101,14 @@ html, body
   padding: 11px 11px 11px 11px;
 }
 
-#geek, #mail
+#geek, #mail, #im > div
 {
   float: left;
   overflow: hidden;
   height: 40px;
 }
 
-#personal, .im
+#personal, #im
 {
   float: right;
   overflow: hidden;
