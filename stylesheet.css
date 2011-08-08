@@ -39,7 +39,7 @@ html, body
 }
 
 #wrapper {
-	min-height: 100%;
+	min-height: 248px;
 	height: 100%;
 	margin: 0 auto -40px; /* the bottom margin is the negative value of the footer's height */
 }
@@ -57,7 +57,9 @@ html, body
 #distance { 
   width:1px;
   height:50%;
+  min-height: 124px;
   margin-bottom: -84px; /* - half of container's height */
+  margin-top: 0;
   float:left;
 }
 
