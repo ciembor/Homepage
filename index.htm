@@ -1,4 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
   <head>
@@ -11,37 +12,6 @@
     <link rel="stylesheet" type="text/css" media="all" href="stylesheet.css" />
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-
-        /* update my contact data (anti spam) */
-        
-        var hostname = window.location.hostname.replace(/www\./, '');
-        
-        $('#adress').attr('href', 'mailto:pub@' + hostname);
-        $('#adress').text('pub@' + hostname);
-        
-        $('#xmpp').attr('href', 'xmpp:' + 'ciembor' + '@' + 'jid.pl');
-        $('#xmpp').text('ciembor' + '@' + 'jid.pl');
-        
-        /* center my image vertically */
-
-        jQuery.fn.vertical_center = function(bar_height) {
-          if ($(window).height() > this.height() + bar_height * 2)
-            this.css('padding-top', ($(window).height() - this.height()) / 2);
-          else
-            this.css('padding-top', bar_height);
-          return this;
-        }
-
-        $('#vertical-center').vertical_center(40);
-
-        $(window).bind('resize', function() {
-          $('#vertical-center').vertical_center(40);
-        });
-        
-      });
-    </script>
 
   </head>
 
@@ -67,6 +37,8 @@
           </ul>
          </div>
       </div>
+      
+      <div id="distance"></div>
       
       <div id="vertical-center">
         <a href="http://ciemborowicz.pl">
@@ -97,6 +69,20 @@
       </div>
       
     </div>
+
+    <script type="text/javascript">
+      // <![CDATA[
+      /* update my contact data (anti spam) */
+          
+      var hostname = window.location.hostname.replace(/www\./, '');
+
+      document.getElementById('adress').href = 'mailto:pub@' + hostname;
+      document.getElementById('adress').innerHTML = 'pub@' + hostname;
+          
+      document.getElementById('xmpp').href = 'xmpp:' + 'ciembor' + '@jid.pl';
+      document.getElementById('xmpp').innerHTML = 'ciembor' + '@jid.pl';
+      // ]]>
+    </script>
 
   </body>
 

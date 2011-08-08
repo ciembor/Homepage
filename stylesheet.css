@@ -40,7 +40,6 @@ html, body
 
 #wrapper {
 	min-height: 100%;
-	height: auto !important;
 	height: 100%;
 	margin: 0 auto -40px; /* the bottom margin is the negative value of the footer's height */
 }
@@ -49,10 +48,17 @@ html, body
 {
   z-index: 1;
   position: relative;
+  margin: 0 auto;
   width: 841px;
   height: 168px;
-  margin-left: auto;
-  margin-right: auto;
+  clear:left;
+}
+
+#distance { 
+  width:1px;
+  height:50%;
+  margin-bottom: -84px; /* - half of container's height */
+  float:left;
 }
 
 #logo
