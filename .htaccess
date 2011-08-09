@@ -1,0 +1,4 @@
+<FilesMatch "\.(htm|html|pdf|flv|jpg|jpeg|png|ico|gif|js|css|swf)(\.gz)?$">
+  Header set Expires "Thu, 15 Apr 2020 20:00:00 GMT"
+  FileETag MTime Size
+</FilesMatch>

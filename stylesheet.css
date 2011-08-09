@@ -58,7 +58,7 @@ html, body
   width:1px;
   height:50%;
   min-height: 124px;
-  margin-bottom: -84px; /* - half of container's height */
+  margin-bottom: -124px; /* - (half of container's height + bar height) */
   margin-top: 0;
   float:left;
 }
@@ -84,8 +84,7 @@ html, body
 
 #top
 {
-  position: absolute;
-  top: 0px;
+  position: relative;
 }
 
 .bar ul
@@ -109,7 +108,7 @@ html, body
   padding: 11px 11px 11px 11px;
 }
 
-#geek, #mail, #im > div
+#geek, #mail, #im>div
 {
   float: left;
   overflow: hidden;
